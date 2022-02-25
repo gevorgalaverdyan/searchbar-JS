@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>searchbar</title>
+        <style>
+            body{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 80vh;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .search-box{
+                border: 2px solid black;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 1em;
+                margin-bottom: 1em;
+            }
+
+            .container{
+                border: 2px solid black;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 1em;
+            }
+
+            .user-item{
+                border: 2px solid black;
+                text-align: center;
+                height: fit-content;
+            
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="search-box" id="search-box">
+            <h1>Search</h1>
+            <input type="text" placeholder="Search" id="search-input">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="container" id="container">
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
