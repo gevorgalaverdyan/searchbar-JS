@@ -60,3 +60,35 @@ span{
 select{
     margin: 1em;
 }
+
+.login-box{
+    border: 1px solid black;
+    padding: 1em;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    top: 15%;
+    background-color: darkcyan;
+    color: white;
+    display: none;
+}
+
+.input-box{
+    display: grid;
+    width: 50%;
+    gap: 1em;
+}
+
+.input-box>button{
+    width: calc(1/3*100%);
+}
+
+.input-box>label>input{
+    width: 100%;
+}
+
+.login-x{
+    cursor: pointer;
+    float: right;
+}

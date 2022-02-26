@@ -14,7 +14,7 @@
             <input type="text" placeholder="Search" id="search-input">
             <button id="search-btn">Search</button>
             <h2>
-                |<span>LogIn</span>|
+                |<span class="login-btn">LogIn</span>|
                 <span>Register</span>|
                 <span id="filters-nav">Filters</span>|
             </h2>
@@ -50,6 +50,21 @@
         <div class="container" id="container">
         </div>
 
+        <div class="login-box" id="login-box">
+            <h2>
+                LOGIN | <span class="login-x login-btn">X</span>
+            </h2>
+            <div class="input-box">
+                <label for="email">Email: <input type="email" name="email" id="email"><span id="email-msg"></span></label>  
+
+                <label for="password">Password: <input type="password" name="password" id="password"></label>  
+
+                <button>Log In</button>
+            </div>
+            
+
+            
+        </div>
 
 
         <script src="./main.js"></script>

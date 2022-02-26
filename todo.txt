@@ -1,0 +1,5 @@
+make search dynamic according to input
+
+regsiter pop up
+
+function for the big for loop
