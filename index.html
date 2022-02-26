@@ -17,14 +17,41 @@
 
         <nav>
             <h2>
-                <span>Log In</span>
-                <span>Register</span>
-                <span>Filters</span>
+                |<span>LogIn</span>|
+                <span>Register</span>|
+                <span>Filters</span>|
             </h2>
+
+            <div id="filters">
+                <h2>Filters</h2>
+            
+                <label for="age-filter">Age
+                    <select name="age-filter" id="age-filter">
+                        <option value="">---</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                    </select>
+                </label>
+            
+                <label for="country-filter">Country
+                    <select name="country-filter" id="country-filter">
+                        <option value="">---</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Syria">Syria</option>
+                    </select>
+                </label>
+            
+                <button id="update-filters">Update</button>
+            </div>
         </nav>
+
+        
 
         <div class="container" id="container">
         </div>
+
+
 
         <script src="./main.js"></script>
     </body>
