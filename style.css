@@ -41,13 +41,14 @@ nav{
     grid-row: 1/3;
     padding: 0.5em;
     background-color: whitesmoke;
+    display: none; 
 }
 
 nav > h2{
     text-align: center;
 }
 
-nav > h2 > span{
+span{
     color: blue;
     cursor: pointer;
 }
