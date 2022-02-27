@@ -16,6 +16,8 @@ let users=[
     },
 ];
 
+
+
 let searchBtn = document.querySelector("#search-btn");
 let userBox = document.querySelector("#container");
 let searchText = document.querySelector("#search-input");
@@ -23,6 +25,22 @@ let filtersNav = document.querySelector("#filters-nav");
 let updateBtn = document.querySelector("#update-filters");
 let loginBtns = document.querySelectorAll(".login-btn");
 let emailInput = document.querySelector("#email");
+
+function add(x){
+    for (user of x) {
+        let userElement = document.createElement("DIV");
+        userElement.classList.add("user-item");
+        userElement.innerHTML = `
+        <h2>${user.name}</h2>
+        <p>Age: ${user.age}</p>
+        <p>Country: ${user.country}</p>
+        `;
+        userBox.appendChild(userElement);
+    }
+}
+
+add(users);
+
 
 emailInput.addEventListener("keyup", function(){
     let emailMsg = document.querySelector("#email-msg");
@@ -66,16 +84,7 @@ updateBtn.addEventListener("click", function () {
     });
 
     userBox.innerHTML = "";
-    for (user of filteredUsers) {
-        let userElement = document.createElement("DIV");
-        userElement.classList.add("user-item");
-        userElement.innerHTML = `
-        <h2>${user.name}</h2>
-        <p>Age: ${user.age}</p>
-        <p>Country: ${user.country}</p>
-        `;
-        userBox.appendChild(userElement);
-    }
+    add(filteredUsers);
 });
 
 filtersNav.addEventListener("click", function(){
@@ -98,28 +107,12 @@ searchBtn.addEventListener("click",function(){
 
     userBox.innerHTML="";
 
-    for(user of filteredUsers){
-        let userElement = document.createElement("DIV");
-        userElement.classList.add("user-item");
-        userElement.innerHTML = `
-        <h2>${user.name}</h2>
-        <p>Age: ${user.age}</p>
-        <p>Country: ${user.country}</p>
-        `;
-        userBox.appendChild(userElement);
-    }
+    add(filteredUsers);
 
 });
 
-for(user of users){
-    let userElement = document.createElement("DIV");
-    userElement.classList.add("user-item");
-    userElement.innerHTML=`
-    <h2>${user.name}</h2>
-    <p>Age: ${user.age}</p>
-    <p>Country: ${user.country}</p>
-    `;
-    userBox.appendChild(userElement);
-}
+
+
+
 
 
