@@ -25,6 +25,7 @@ let filtersNav = document.querySelector("#filters-nav");
 let updateBtn = document.querySelector("#update-filters");
 let loginBtns = document.querySelectorAll(".login-btn");
 let emailInput = document.querySelector("#email");
+let registerBtn = document.querySelectorAll(".register-btn");
 
 function add(x){
     for (user of x) {
@@ -41,6 +42,16 @@ function add(x){
 
 add(users);
 
+// search input event
+searchText.addEventListener("keyup", function(){
+    let filteredUsers = users.filter(function (user) {
+        return user.name.toLocaleLowerCase().includes(searchText.value.toLocaleLowerCase());
+    });
+
+    userBox.innerHTML = "";
+
+    add(filteredUsers);
+});
 
 emailInput.addEventListener("keyup", function(){
     let emailMsg = document.querySelector("#email-msg");
@@ -53,6 +64,24 @@ emailInput.addEventListener("keyup", function(){
         emailMsg.style.color = "red";
     }
 });
+
+
+// REGISTER
+for(b of registerBtn){
+    b.addEventListener("click", openHideRegister)
+}
+
+function openHideRegister(){
+    let registerBox = document.querySelector("#register-box");
+    if (registerBox.style.display === '' || registerBox.style.display === 'none') {
+        registerBox.style.display = 'block';
+    } else {
+        registerBox.style.display = 'none';
+    }
+}
+
+
+
 //LOGIN
 for(btn of loginBtns){
     btn.addEventListener("click", openHideLogin);

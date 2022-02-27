@@ -15,7 +15,7 @@
             <button id="search-btn">Search</button>
             <h2>
                 |<span class="login-btn">LogIn</span>|
-                <span>Register</span>|
+                <span class="register-btn">Register</span>|
                 <span id="filters-nav">Filters</span>|
             </h2>
         </div>
@@ -47,9 +47,25 @@
 
         
 
-        <div class="container" id="container">
+        <div class="container" id="container"></div>
+
+        <!-- REGISTER -->
+        <div class="register-box" id="register-box">
+            <h2>
+                Register | <span class="login-x register-btn">X</span>
+            </h2>
+            <div class="register-input-box">
+                <label for="email">Email: <input type="email" name="new-email" id="new-email"></label>
+            
+                <label for="nPassword">Password: <input type="password" name="nPassword" id="new-password"></label>
+
+                <label for="confirm-password">Confirm Password: <input type="password" name="confirm-password" id="confirm-password"></label>
+            
+                <button>Resgister</button>
+            </div>
         </div>
 
+        <!-- Log in -->
         <div class="login-box" id="login-box">
             <h2>
                 LOGIN | <span class="login-x login-btn">X</span>

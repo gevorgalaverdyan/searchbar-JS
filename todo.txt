@@ -1,3 +1,0 @@
-make search dynamic according to input
-
-regsiter pop up
