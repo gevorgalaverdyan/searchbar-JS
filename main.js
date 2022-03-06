@@ -1,5 +1,10 @@
 let users=[
     {
+        name: "Areg",
+        age: 21,
+        country: "Uzbekistan"
+    },
+    {
         name: "Gevorg",
         age:21,
         country:"Armenia"
@@ -13,6 +18,11 @@ let users=[
         name: "Mario",
         age: 19,
         country: "Syria"
+    },
+    {
+        name: "Abdul Ibn Abd Al Rahman Al Nazim",
+        age: 19,
+        country: "Kuwait"
     },
 ];
 
@@ -72,6 +82,7 @@ for(b of registerBtn){
 }
 
 function openHideRegister(){
+    
     let registerBox = document.querySelector("#register-box");
     if (registerBox.style.display === '' || registerBox.style.display === 'none') {
         registerBox.style.display = 'block';
