@@ -36,6 +36,8 @@ let updateBtn = document.querySelector("#update-filters");
 let loginBtns = document.querySelectorAll(".login-btn");
 let emailInput = document.querySelector("#email");
 let registerBtn = document.querySelectorAll(".register-btn");
+let loginBox = document.querySelector("#login-box");
+let registerBox = document.querySelector("#register-box");
 
 function add(x){
     for (user of x) {
@@ -82,10 +84,12 @@ for(b of registerBtn){
 }
 
 function openHideRegister(){
-    
-    let registerBox = document.querySelector("#register-box");
     if (registerBox.style.display === '' || registerBox.style.display === 'none') {
+        if (loginBox.style.display !== "" || loginBox.style.display !== "none"){
+            loginBox.style.display='none';
+        }
         registerBox.style.display = 'block';
+        
     } else {
         registerBox.style.display = 'none';
     }
@@ -99,8 +103,10 @@ for(btn of loginBtns){
 }
 
 function openHideLogin(){
-    let loginBox=document.querySelector("#login-box");
     if(loginBox.style.display===''||loginBox.style.display==='none'){
+        if (registerBox.style.display !== '' || registerBox.style.display !== 'none'){
+            registerBox.style.display='none';
+        }
         loginBox.style.display = 'block';
     } else {
         loginBox.style.display = 'none';
@@ -113,7 +119,6 @@ updateBtn.addEventListener("click", function () {
     let currentAge = document.querySelector("#age-filter").value.toString();
     let currentCountry = document.querySelector("#country-filter").value.toLocaleLowerCase();
   
-
     let filteredUsers = users.filter(function(user){
       
         return (
